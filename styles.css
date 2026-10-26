@@ -1,0 +1,53 @@
+/* Twin Cities Animal Rescue • Touchstone 3 • mobile-first design */
+:root { --navy:#153849; --teal:#087f75; --cream:#f7f7f2; --white:#ffffff; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--cream); color:var(--navy); font-family:Arial,Helvetica,sans-serif; line-height:1.65; font-size:1rem; }
+a { color:var(--teal); text-underline-offset:3px; }
+a:hover { text-decoration-thickness:2px; }
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible { outline:3px solid var(--teal); outline-offset:3px; }
+header { background:var(--navy); color:var(--white); display:flex; flex-direction:column; gap:.5rem; align-items:center; padding:1rem max(1rem,calc((100vw - 1100px)/2)); }
+header > a { display:block; padding:.3rem; background:var(--white); border-radius:.75rem; }
+header img { display:block; max-width:110px; height:auto; }
+header p { font-size:1.15rem; font-weight:700; margin:0; text-align:center; }
+nav { width:100%; }
+nav ul { display:flex; flex-wrap:wrap; justify-content:center; gap:.45rem; list-style:none; margin:.5rem 0 0; padding:0; }
+nav li { flex:1 1 145px; text-align:center; }
+nav a { display:block; color:var(--white); text-decoration:none; font-weight:bold; border:1px solid var(--white); border-radius:.6rem; padding:.65rem .75rem; min-height:44px; }
+nav a:hover, nav a[aria-current="page"] { background:var(--teal); border-color:var(--teal); }
+main { width:min(100% - 2rem,1000px); margin:2rem auto 3rem; }
+h1,h2,h3 { font-family:Georgia,'Times New Roman',serif; line-height:1.2; }
+h1 { font-size:clamp(2rem,4vw,3rem); margin:0 0 1rem; }
+h2 { font-size:clamp(1.35rem,2.5vw,1.9rem); margin-top:0; }
+p,li { max-width:76ch; }
+main > p:first-of-type { font-size:1.12rem; }
+main > picture { display:block; margin:1.5rem 0; }
+img,video { max-width:100%; height:auto; border-radius:.65rem; }
+main > picture img { display:block; width:100%; max-height:420px; object-fit:cover; }
+section { background:var(--white); border:1px solid #d9e4e2; border-radius:1rem; padding:1.25rem; margin:1.25rem 0; box-shadow:0 4px 16px rgba(21,56,73,.06); }
+section > img { display:block; width:min(100%,550px); margin:.75rem 0; }
+figure { margin:1rem 0; } figure img { display:block; } figcaption { font-size:.93rem; margin-top:.45rem; }
+ul,ol { padding-left:1.5rem; }
+li + li { margin-top:.3rem; }
+form { max-width:720px; }
+fieldset { border:1px solid var(--teal); border-radius:.75rem; padding:1rem; margin:1.1rem 0; min-width:0; }
+legend { font-weight:700; padding:0 .35rem; }
+label { font-weight:600; display:inline-block; margin-bottom:.3rem; }
+input,select,textarea { width:100%; max-width:100%; min-height:44px; padding:.65rem .7rem; color:var(--navy); background:var(--white); border:1px solid var(--navy); border-radius:.45rem; font:inherit; }
+textarea { min-height:110px; resize:vertical; }
+button,input[type="submit"],input[type="reset"] { background:var(--teal); color:var(--white); cursor:pointer; width:auto; padding:.7rem 1.2rem; border:2px solid var(--teal); font-weight:bold; border-radius:.5rem; min-height:44px; }
+button:hover,input[type="submit"]:hover { background:var(--navy); border-color:var(--navy); }
+footer { background:var(--navy); color:var(--white); padding:1.75rem 1rem; text-align:center; }
+footer p { margin:.3rem auto; } footer a { color:var(--white); }
+@media (min-width:760px) {
+ header { flex-direction:row; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
+ header > a { flex:0 0 auto; }
+ header p { text-align:left; }
+ nav { flex:1 1 560px; width:auto; }
+ nav ul { justify-content:flex-end; margin:0; }
+ nav li { flex:0 1 auto; }
+ main { margin-top:2.5rem; }
+ section { padding:1.8rem 2rem; }
+ main > picture img { max-height:480px; }
+}
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
