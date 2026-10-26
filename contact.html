@@ -25,7 +25,7 @@
     <p>Interested in volunteering, fostering, or learning about adoption? Fill out this demonstration inquiry form to show us what kind of opportunity you would like to explore.</p>
     <section aria-labelledby="inquiry-heading">
       <h2 id="inquiry-heading">Volunteer or Foster Interest Form</h2>
-      <form action="#" method="get">
+      <form id="rescue-interest-form" action="#" method="get" novalidate>
         <fieldset>
           <legend>Your Contact Information</legend>
           <p><label for="full-name">Full name (required)</label><br>
@@ -57,7 +57,13 @@
         </fieldset>
         <p><button type="submit">Review Interest Form</button></p>
       </form>
+      <p id="form-status" role="status" aria-live="polite"></p>
       <p><small>Student demonstration only: this form does not send information to an actual rescue organization.</small></p>
+    </section>
+    <section class="saved-interest-panel" aria-labelledby="saved-interest-heading">
+      <h2 id="saved-interest-heading">Your Saved Interests</h2>
+      <p id="saved-interest-message">Choose some ways to help on our services page, then return here.</p>
+      <a href="services.html#interest-planner">Choose ways to help</a>
     </section>
     <section aria-labelledby="area-heading">
       <h2 id="area-heading">Service Area and Office Hours</h2>
@@ -69,5 +75,6 @@
     <p>&copy; 2026 Twin Cities Animal Rescue. Educational website demonstration.</p>
     <p><a href="contact.html" aria-current="page">Volunteer or foster inquiry</a></p>
   </footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
